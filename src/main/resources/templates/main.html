@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ERDR_WEB</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 700px; /* Отступ от левого края */
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* Отступ между кнопками и описаниями */
+        }
+
+        .button {
+            padding: 10px 20px;
+            margin-right: 10px; /* Отступ между кнопками */
+            background-color: #4075af;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .description {
+            margin-left: 10px;
+        }
+
+        .footer {
+            margin-top: 50px;
+        }
+
+        .footer button {
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #4075af;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1 style="color: blueviolet">ГОЛОВНА СТОРІНКА ДОДАТКУ</h1>
+<h1 style="color: blueviolet">ERDR_WEB</h1>
+<div class="container">
+    <div class="button-container">
+        <button class="button"><a style="color: aliceblue" href="/oneAction">Press 1</a></button>
+        <span  style="color: seagreen" class="description">порiвняти два списки ЕРДР (listOne.txt listTwo.txt)</span>
+    </div>
+
+    <div class="button-container">
+        <button class="button"><a style="color: aliceblue" href="/twoAction">Press 2</a></button>
+        <span style="color: seagreen" class="description">порiвняти будь-якi два аналогiчнi списки (listOne.txt listTwo.txt)</span>
+    </div>
+
+    <div class="button-container">
+        <button class="button"><a style="color: aliceblue" href="/oneAction">Press 3</a></button>
+        <span style="color: seagreen" class="description">пiдготувати список ЕРДР у форматi 1 2021 10001-1234567 ( listOne.txt )</span>
+    </div>
+
+    <div class="button-container">
+        <button class="button"><a style="color: aliceblue" href="/twoAction">Press 4</a></button>
+        <span style="color: seagreen" class="description">пiдготувати список ЕРДР у форматi 12021100011234567000 (з 000 наприкiнцi) (listOne.txt)</span>
+    </div>
+    <div class="button-container">
+        <button class="button"><a style="color: aliceblue" href="/oneAction">Press 5</a></button>
+        <span  style="color: seagreen" class="description">перетворити форму статi ККУ cт.185 ч.1 у просту форму 185 (listOne.txt)</span>
+    </div>
+
+    <div class="button-container">
+        <button class="button"><a style="color: aliceblue" href="/twoAction">Press 6</a></button>
+        <span style="color: seagreen" class="description">додавання рядкiв, а також перевiрка списку прiзвищ (для виплат) (listOne.txt)</span>
+    </div>
+
+    <div class="button-container">
+        <button class="button"><a style="color: aliceblue" href="/oneAction">Press 7</a></button>
+        <span style="color: seagreen" class="description">створення форми для вiдрядження (listOne.txt)</span>
+    </div>
+
+    <div class="button-container">
+        <button class="button"><a style="color: aliceblue" href="/twoAction">Press 8</a></button>
+        <span style="color: seagreen" class="description">порiвняти два списки працiвникiв (поточний - listOne, попереднiй - ListTwo)</span>
+    </div>
+
+
+    <!-- Добавьте другие кнопки и описания аналогичным образом -->
+</div>
+
+<div class="footer">
+    <p style="color: red">ВІДКРИТИ</p>
+    <button><a style="color: aliceblue" href="/openlistOne">ListOne</a></button>
+    <button><a style="color: aliceblue" href="/openlistTwo">ListTwo</a></button>
+    <button><a style="color: aliceblue" href="/openResult">Result</a></button>
+</div>
+</body>
+</html>
