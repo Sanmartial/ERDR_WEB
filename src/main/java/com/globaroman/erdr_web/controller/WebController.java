@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -25,13 +29,11 @@ public class WebController {
     private final ActionFiveService fiveService;
     private final ActionSixService sixService;
     private final ActionSevenService sevenService;
-    private final ActionEightService eightService;
 
     @GetMapping("/main")
     public String getMainPage() {
         return "main";
     }
-
 
     @GetMapping("/oneAction")
     public String getImplOneAction() {
@@ -88,13 +90,10 @@ public class WebController {
 
     @GetMapping("/sixAction/addRows")
     public String processAddRowsToLine(@RequestParam(value = "amountRows") int amountRows) {
-        //model.addAttribute("amountRows", getAmountRowsFromFile());
         sixService.addingRows(amountRows);
-
         openFileFromOS.openFile(PathToFile.RESULT);
         return "main";
     }
-
 
     @GetMapping("/sevenAction")
     public String getImplSevenAction() {
@@ -102,14 +101,6 @@ public class WebController {
         openFileFromOS.openFile(PathToFile.RESULT);
         return "main";
     }
-
-    @GetMapping("/eightAction")
-    public String getImplEightAction() {
-        eightService.compareTwoListsEmployees();
-        openFileFromOS.openFile(PathToFile.RESULT);
-        return "main";
-    }
-
 
     @GetMapping("/openListOne")
     public String openListOneFromPC() {
@@ -129,9 +120,15 @@ public class WebController {
         return "main";
     }
 
-
     private int getAmountRowsFromFile() {
-        List<String> list = rawService.readInformationFromFile(PathToFile.AMOUNT_ROWS);
+        List<String> list = new ArrayList<>();
+        if (Files.notExists(Paths.get(PathToFile.AMOUNT_ROWS))) {
+            new File(PathToFile.AMOUNT_ROWS);
+            list.add("5");
+            rawService.writeInformationToFile(PathToFile.AMOUNT_ROWS, list);
+        } else {
+            list = rawService.readInformationFromFile(PathToFile.AMOUNT_ROWS);
+        }
         return Integer.parseInt(list.get(0));
     }
 

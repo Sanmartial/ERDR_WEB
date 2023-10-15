@@ -6,7 +6,7 @@
     <style>
         body {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         .button a {
@@ -36,12 +36,10 @@
             margin: 5px;
             padding: 10px 20px;
             background-color: #4075af;
-            color: red;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
-
 
         .counter-container {
             display: flex;
@@ -49,7 +47,7 @@
             justify-content: center;
             margin-top: 50px;
             background-color: #4075af;
-            color: white;
+            color: yellow;
         }
 
         .counter-label {
@@ -64,15 +62,27 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .logo {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .logo img {
+            height: 99px;
+            width: 67px;
+        }
     </style>
 </head>
 <body>
+<div class="logo">
+    <img src="Тризуб.jpg"  />
+</div>
 <h1 style="color: darkred">ППОП №1 ГУМВС У М.КИЄВІ</h1>
 <h1 style="color: blueviolet">ERDR_HELP</h1>
 <h1 style="color: seagreen">Press 6</h1>
 
 <div class="footer1">
-    <button><a style="color: aliceblue" href="/main">НА ГОЛОВНУ СТОРІНКУ</a></button>
+    <button><a style="color: yellow" href="/main">НА ГОЛОВНУ СТОРІНКУ</a></button>
 </div>
 <div class="counter-container">
     <span class ="counter-label">ДОДАТИ РЯДКИ В КІЛЬКОСТІ:</span>
@@ -81,17 +91,13 @@
     <button class="counter-button" id="increment">+</button>
 </div>
 
-
 <div class="footer">
-    <!--<button><a style="color: aliceblue" href="/main">НА ГОЛОВНУ СТОРІНКУ</a></button> -->
-
-    <form action="/sixAction/addRows" method="GET">
+      <form action="/sixAction/addRows" method="GET">
         <input type="hidden" name="amountRows" th:value="${amountRows}"/>
 
-        <button type="submit">ПІДТВЕРДИТИ</button>
+        <button style="color: yellow" type="submit">ПІДТВЕРДИТИ</button>
     </form>
 </div>
-
 
 <script>
     const amountRowsElement = document.getElementById('amountRows');

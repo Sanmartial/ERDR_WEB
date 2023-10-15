@@ -6,7 +6,7 @@
     <style>
         body {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 10px;
         }
 
         .container {
@@ -27,7 +27,7 @@
             padding: 10px 20px;
             margin-right: 10px; /* Отступ между кнопками */
             background-color: #4075af;
-            color: white;
+            color: yellow;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -42,69 +42,76 @@
         }
 
         .footer button {
+            width: 100px;
             margin: 5px;
             padding: 10px 20px;
             background-color: #4075af;
-            color: white;
+            color: yellow;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .logo img {
+            height: 99px;
+            width: 67px;
         }
     </style>
 </head>
 <body>
 
+<div class="logo">
+    <img src="Тризуб.jpg"  />
+</div>
+
 <h1 style="color: darkred">ППОП №1 ГУМВС У М.КИЄВІ</h1>
 <h1 style="color: blueviolet">ERDR_HELP</h1>
 <div class="container">
     <div class="button-container">
-        <button class="button"><a style="color: aliceblue" href="/oneAction">Press 1</a></button>
+        <button class="button"><a style="color: yellow" href="/oneAction">Press 1</a></button>
         <span  style="color: seagreen" class="description">порiвняти два списки ЕРДР (listOne.txt listTwo.txt)</span>
     </div>
 
     <div class="button-container">
-        <button class="button"><a style="color: aliceblue" href="/twoAction">Press 2</a></button>
+        <button class="button"><a style="color: yellow" href="/twoAction">Press 2</a></button>
         <span style="color: seagreen" class="description">порiвняти будь-якi два аналогiчнi списки (listOne.txt listTwo.txt)</span>
     </div>
 
     <div class="button-container">
-        <button class="button"><a style="color: aliceblue" href="/threeAction">Press 3</a></button>
+        <button class="button"><a style="color: yellow" href="/threeAction">Press 3</a></button>
         <span style="color: seagreen" class="description">пiдготувати список ЕРДР у форматi 1 2021 10001-1234567 ( listOne.txt )</span>
     </div>
 
     <div class="button-container">
-        <button class="button"><a style="color: aliceblue" href="/fourAction">Press 4</a></button>
+        <button class="button"><a style="color: yellow" href="/fourAction">Press 4</a></button>
         <span style="color: seagreen" class="description">пiдготувати список ЕРДР у форматi 12021100011234567000 (з 000 наприкiнцi) (listOne.txt)</span>
     </div>
     <div class="button-container">
-        <button class="button"><a style="color: aliceblue" href="/fiveAction">Press 5</a></button>
-        <span  style="color: seagreen" class="description">перетворити форму статi ККУ cт.185 ч.1 у просту форму 185 (listOne.txt)</span>
+        <button class="button"><a style="color: yellow" href="/fiveAction">Press 5</a></button>
+        <span  style="color: seagreen" class="description">перетворити форму статi ККУ у просту форму (ст.185 ч.1 -> 185) (listOne.txt)</span>
     </div>
 
     <div class="button-container">
-        <button class="button"><a style="color: aliceblue" href="/sixAction">Press 6</a></button>
+        <button class="button"><a style="color: yellow" href="/sixAction">Press 6</a></button>
         <span style="color: seagreen" class="description">додавання рядкiв, а також перевiрка списку прiзвищ (для виплат) (listOne.txt)</span>
     </div>
 
     <div class="button-container">
-        <button class="button"><a style="color: aliceblue" href="/sevenAction">Press 7</a></button>
-        <span style="color: seagreen" class="description">створення форми для вiдрядження (listOne.txt)</span>
-    </div>
-
-    <div class="button-container">
-        <button class="button"><a style="color: aliceblue" href="/eightAction">Press 8</a></button>
+        <button class="button"><a style="color: yellow" href="/sevenAction">Press 7</a></button>
         <span style="color: seagreen" class="description">порiвняти два списки працiвникiв (поточний - listOne, попереднiй - ListTwo)</span>
     </div>
 
-
-    <!-- Добавьте другие кнопки и описания аналогичным образом -->
 </div>
 
 <div class="footer">
-    <p style="color: red">ВІДКРИТИ</p>
-    <button><a style="color: aliceblue" href="/openListOne">ListOne</a></button>
-    <button><a style="color: aliceblue" href="/openListTwo">ListTwo</a></button>
-    <button><a style="color: aliceblue" href="/openResult">Result</a></button>
+    <p style="color: red">  ВІДКРИТИ</p>
+    <button><a style="color: yellow" href="/openListOne">ListOne</a></button>
+    <button><a style="color: yellow" href="/openListTwo">ListTwo</a></button>
+    <button><a style="color: yellow" href="/openResult">Result</a></button>
 
 </div>
 </body>
