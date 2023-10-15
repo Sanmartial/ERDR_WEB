@@ -1,7 +1,9 @@
 package com.globaroman.erdr_web.model;
 
-import java.util.Objects;
+import lombok.Getter;
 
+import java.util.Objects;
+@Getter
 public class Policeman {
     private final int ID;
     private final String rank; //звание
@@ -39,31 +41,9 @@ public class Policeman {
     public int hashCode() {
         return Objects.hash(rank, surname, Position);
     }
-    public int getID() {
-        return ID;
-    }
-    public String getChangeless() {
-        return changeless;
-    }
+
     public void setChangeless(String changeless) {
         this.changeless = changeless;
     }
-    public String getRank() {
-        return rank;
-    }
-    public String getSurname() {
-        return surname;
-    }
-    public String getFirstName() {
-        return firstName;
-    }
-    public String getPatronymic() {
-        return patronymic;
-    }
-    public String getPosition() {
-        return Position;
-    }
-    public String getUnit() {
-        return unit;
-    }
+
 }

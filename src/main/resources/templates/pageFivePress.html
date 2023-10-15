@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ERDR_HELP</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: calc(33.33%); /* Отступ от левого края */
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* Отступ между кнопками и описаниями */
+        }
+
+        .button {
+            width: 100px; /* Фиксированная ширина */
+            background-color: #4075af;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .button a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .description {
+            flex: 1;
+            color: seagreen;
+        }
+
+        .footer {
+            margin-top: 50px;
+        }
+
+        .footer button {
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #4075af;
+            color: red; /* Изменил цвет текста на красный */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1 style="color: darkred">ППОП №1 ГУМВС У М.КИЄВІ</h1>
+<h1 style="color: blueviolet">ERDR_HELP</h1>
+<h1 style="color: seagreen">Press 5</h1>
+<div class="container">
+    <div class="button-container">
+        <button class="button"><a href="/fiveAction/GU">Для ГУ</a></button>
+        <div class="description">перетворити форму статей ККУ по спрощеній формі для довідки до ГУМВС (listOne.txt)</div>
+    </div>
+
+    <div class="button-container">
+        <button class="button"><a href="/fiveAction/DPD">Для ДПД</a></button>
+        <div class="description">перетворити форму статей ККУ по спрощеній формі для довідки до ДПД (listOne.txt)</div>
+    </div>
+</div>
+
+<div class="footer">
+
+    <button><a style="color: aliceblue" href="/main">НА ГОЛОВНУ СТОРІНКУ</a></button>
+
+</div>
+</body>
+</html>
